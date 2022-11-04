@@ -339,7 +339,7 @@ public class Instrument {
                     }
                     FileUtils.copyFile(file, new File(descPath + File.separator + file.getName()));
                 } else {
-                    String clazzPath = relative.replace("/", ".").substring(1) + "." +
+                    String clazzPath = relative.replace("/", ".").substring(0) + "." +
                             file.getName().substring(0, file.getName().indexOf(".class"));
                     SootClass clazz = Scene.v().loadClassAndSupport(clazzPath);
                     for (SootMethod method : clazz.getMethods()) {

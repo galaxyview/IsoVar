@@ -46,7 +46,7 @@ public class MainClass {
     }
 
     public static boolean isLinux() {
-        return System.getProperty("os.name").toLowerCase().contains("linux");
+        return System.getProperty("os.name").toLowerCase().contains("linux")||System.getProperty("os.name").toLowerCase().contains("mac os x");
     }
 
     protected void run(String[] args) {
@@ -189,12 +189,12 @@ public class MainClass {
         String phase = cmd.getOptionValue(OPTION_PHASE);
         if (phase != null) {
             config.setPhase(phase);
-        } else config.setPhase("instrument");
+        } else config.setPhase("analyze");
 
         String project_root = cmd.getOptionValue(OPTION_PATH_TO_PROJECT);
         if (project_root != null) {
             config.setProjectRoot(project_root);
-        } else config.setProjectRoot("null");
+        } else config.setProjectRoot("demo/Time_1_buggy");
 
         String binary_dir = cmd.getOptionValue(OPTION_PATH_TO_BINARY);
         if (binary_dir != null) {

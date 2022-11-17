@@ -189,12 +189,12 @@ public class MainClass {
         String phase = cmd.getOptionValue(OPTION_PHASE);
         if (phase != null) {
             config.setPhase(phase);
-        } else config.setPhase("instrument");
+        } else config.setPhase("analyze");
 
         String project_root = cmd.getOptionValue(OPTION_PATH_TO_PROJECT);
         if (project_root != null) {
             config.setProjectRoot(project_root);
-        } else config.setProjectRoot("demo/Csv_1_buggy");
+        } else config.setProjectRoot("demo/Time_1_buggy");
 
         String binary_dir = cmd.getOptionValue(OPTION_PATH_TO_BINARY);
         if (binary_dir != null) {
@@ -224,7 +224,7 @@ public class MainClass {
         String projectName = cmd.getOptionValue(OPTION_PROJECT_NAME);
         if (projectName != null) {
             config.setProjectName(projectName);
-        } else config.setProjectName("Csv");
+        } else config.setProjectName("Time");
 
         String id = cmd.getOptionValue(OPTION_ID);
         if (id != null) {
